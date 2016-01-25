@@ -1,23 +1,17 @@
 import gulp from 'gulp';
-import browserSync, {
-  reload
-}
-from 'browser-sync';
+import browserSync, { reload } from 'browser-sync';
 import gulpIf from 'gulp-if';
 import path from 'path';
 import sourcemaps from 'gulp-sourcemaps';
-import config from '../../config.js';
-import {
-  argv
-}
-from 'yargs';
+import { argv } from 'yargs';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
+// Guzzle
+import handleErrors from '../utils/handleErrors';
+import config from '../../config.js';
+import Logger from '../utils/logger';
 
-const {
-  srcDir, buildDir, distDir, cssDir, imgDir, sassDir, fontsDir, jsDir
-} = config.dir;
-
+const { srcDir, buildDir, distDir, jsDir } = config.dir;
 const stream = argv.watch ? true : false;
 const production = argv.prod ? true : false;
 const destDir = production ? distDir : buildDir;
@@ -28,7 +22,7 @@ gulp.task('scripts', () => {
     entry = {...entry, [item]: `${config.dir.srcDir}${config.dir.jsDir}${item}`
     };
   });
-
+  Logger.task('RUNNING TASK: Scripts');
   gulp.src(`${srcDir + jsDir}*.js`)
     .pipe(webpackStream({
       devtool: 'source-map',

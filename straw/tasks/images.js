@@ -2,21 +2,19 @@ import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import pngquant from 'imagemin-pngquant';
 import cache from 'gulp-cached';
+import { argv } from 'yargs';
+// Guzzle
+import handleErrors from '../utils/handleErrors';
 import config from '../../config.js';
-import {
-  argv
-}
-from 'yargs';
-const {
-  srcDir, buildDir, distDir, cssDir, imgDir, sassDir, fontsDir, jsDir
-} = config.dir;
+import Logger from '../utils/logger';
 
-const stream = argv.watch ? true : false;
+const { srcDir, buildDir, distDir, cssDir, imgDir } = config.dir;
 const production = argv.prod ? true : false;
 const destDir = production ? distDir : buildDir;
 
 gulp.task('images', () => {
-  gulp.src([srcDir + imgDir + '**'])
+  Logger.task('RUNNING TASK: Images');
+  return gulp.src([srcDir + imgDir + '**'])
     .pipe(cache('img'))
     .pipe(imagemin({
       progressive: true,
