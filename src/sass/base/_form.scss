@@ -1,10 +1,7 @@
-/**
- * <form> component style
- *
- */
+// <form> component style
 form {
     input, textarea, button {
-        font-family: $default-fontFamily;
+        font-family: $default-font-family;
     }
 
     input {}

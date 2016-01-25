@@ -1,7 +1,4 @@
-/*
-  Responsive
-*/
-
+/// Responsive Breakpoints
 $breakpoints: (
     'small'        : 33.125rem,
     'medium'       : 48rem,
@@ -11,13 +8,16 @@ $breakpoints: (
     'massive'      : 100rem
 );
 
-/* ( rem => px
-    'small'        : 530px,
-    'medium'       : 768px,
-    'normal'       : 980px,
-    'large'        : 1200px,
-    'huge'         : 1400px,
-    'massive'      : 1600px
-) */
+// ( rem => px
+//     'small'        : 530px,
+//     'medium'       : 768px,
+//     'normal'       : 980px,
+//     'large'        : 1200px,
+//     'huge'         : 1400px,
+//     'massive'      : 1600px
+// )
 
 $tweakpoints: ();
+
+/// Colors
+$black: #000;
