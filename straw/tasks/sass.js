@@ -40,9 +40,9 @@ gulp.task('sass', () => {
     .pipe(gIf(stream, $.sourcemaps.write('.')))
     .pipe(gIf(production, $.cssnano()))
     .pipe(gIf(production, $.banner(config.banner)))
-    .pipe(gIf(production, $.rename({
-      suffix: '.min'
-    })))
+    // .pipe(gIf(production, $.rename({
+    //   suffix: '.min'
+    // })))
     .pipe(gIf(production, $.base64({
       extensions: ['svg', 'png', 'jpg']
     })))

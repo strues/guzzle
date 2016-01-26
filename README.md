@@ -32,9 +32,21 @@ $ npm run build
 
 ## Documentation
 
+#### Develop
+`npm start` or `gulp dev --watch` runs the JavaScript through Webpack, processes Sass files, launches BrowserSync, and
+watches for changes. CSS updates are injected automatically, but can be disabled from the config file. **If the `--watch` flag
+is not passed, changes will not be processed automatically.**
+
 #### Build for production
 `npm run build` or `gulp build --prod` will both minify and optimize files for production. It is important to note that,
 you must pass the --prod flag in order to instruct Gulp to perform the additional production tasks.
+
+#### Linting
+It's recommended, but not required to have eslint installed globally, `npm install -g eslint`. However, it will work regardless.
+In order for scss-lint to work you must have the Ruby Gem, [scss-lint](https://github.com/brigade/scss-lint) installed.
+`gulp lint` runs both eslint and scss-lint.  
+`gulp lint:eslint` runs **only** eslint.  
+`gulp lint:scss` runs **only** scss-lint.
 
 Troubleshooting
 ---------------
