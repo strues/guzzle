@@ -46,7 +46,7 @@ It's recommended, but not required to have eslint installed globally, `npm insta
 In order for scss-lint to work you must have the Ruby Gem, [scss-lint](https://github.com/brigade/scss-lint) installed.  
 
 Run both eslint and scss-lint.  
-`gulp lint`
+`gulp lint`  
 Run **only** eslint.  
 `gulp lint:eslint`  
 Run **only** scss-lint.  
