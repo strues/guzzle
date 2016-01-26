@@ -45,11 +45,13 @@ you must pass the --prod flag in order to instruct Gulp to perform the additiona
 It's recommended, but not required to have eslint installed globally, `npm install -g eslint`. However, it will work regardless.
 In order for scss-lint to work you must have the Ruby Gem, [scss-lint](https://github.com/brigade/scss-lint) installed.  
 
-Run both eslint and scss-lint.  
+##### Run both eslint and scss-lint.  
 `gulp lint`  
-Run **only** eslint.  
+
+##### Run **only** eslint.  
 `gulp lint:eslint`  
-Run **only** scss-lint.  
+
+##### Run **only** scss-lint.  
 `gulp lint:scss`  
 
 Troubleshooting
