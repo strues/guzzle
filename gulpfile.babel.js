@@ -1,12 +1,5 @@
-import gulp from 'gulp';
-import { readdirSyncRecursive } from 'wrench';
+import tasks from './straw/tasks';
 
-/**
- *  This will load all js or coffee files in the gulp directory
- *  in order to load all gulp tasks
- */
-readdirSyncRecursive('./straw/tasks/').filter(function(file) {
-  return (/\.(js)$/i).test(file);
-}).map(function(file) {
-  require('./straw/tasks/' + file);
-});
+// gulp-devtools
+// https://github.com/niki4810/gulp-devtools
+module.exports = require('gulp');

@@ -17,7 +17,7 @@ gulp.task('clean:build', () => {
 });
 
 gulp.task('clean:dist', () => {
-  del(distDir + '**/*', {
+  del(distDir, {
     force: true
   });
 });

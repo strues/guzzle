@@ -10,7 +10,7 @@ const options = {
 
 const banner =
   `/**
- * ${pkg.title}
+ * ${pkg.name}
  * ${pkg.description}
  * Compiled: ${Date()}
  * @version v${pkg.version}
@@ -34,6 +34,7 @@ export default {
     openBrowserOnStartup: false,
     online: true
   },
+  browsers: 'last 2 versions',
   dir: {
     srcDir: __dirname + '/src/',
     buildDir: __dirname + '/__build__/',
@@ -58,5 +59,6 @@ export default {
     babel: {
       presets: ['es2015', 'stage-0']
     }
-  }
+  },
+  banner: banner
 };

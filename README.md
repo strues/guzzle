@@ -32,6 +32,9 @@ $ npm run build
 
 ## Documentation
 
+#### Build for production
+`npm run build` or `gulp build --prod` will both minify and optimize files for production. It is important to note that,
+you must pass the --prod flag in order to instruct Gulp to perform the additional production tasks.
 
 Troubleshooting
 ---------------
