@@ -15,7 +15,7 @@ gulp.task('dev', ['clean'], () => {
   if (stream) {
     gulp.start('serve');
     watch(srcDir + sassDir + '**/*.scss', () => gulp.start('sass'));
-    //watch(srcDir + imgDir + '*', () => gulp.start('images'));
+    watch(srcDir + imgDir + '*', () => gulp.start('images'));
     watch(srcDir + '*.html', () => gulp.start('html'));
   }
 });

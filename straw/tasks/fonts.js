@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import ttf2woff from 'gulp-ttf2woff';
 import ttf2woff2 from 'gulp-ttf2woff2';
 import { argv } from 'yargs';
+import Fontmin from 'fontmin';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
 import config from '../../config.js';
@@ -14,14 +15,24 @@ const destDir = production ? distDir : buildDir;
 
 gulp.task('fonts', () => {
   Logger.task('RUNNING TASK: Fonts');
-  // ttf to woff
-  gulp.src(srcDir + 'fonts/**/*.ttf')
-    .pipe(ttf2woff())
-    .pipe(gulp.dest(destDir + fontsDir));
+  let fontmin = new Fontmin()
+    .src(`${srcDir}/fonts/*.ttf`)
+    .use(Fontmin.ttf2eot({
+      clone: true
+    }))
+    .use(Fontmin.ttf2woff({
+      clone: true
+    }))
+    .use(Fontmin.ttf2svg({
+      clone: true
+    }))
+    .dest(destDir + fontsDir);
 
-  // ttf to woff2
-  gulp.src(srcDir + 'fonts/**/*.ttf')
-    .pipe(ttf2woff2())
-    .pipe(gulp.dest(destDir + fontsDir));
-
+  return fontmin.run(
+    function(err, files, stream) {
+      if (err) {
+        console.log(err);
+      }
+    }
+  );
 });

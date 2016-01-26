@@ -34,8 +34,13 @@ let processors = [
 gulp.task('sass', () => {
   Logger.task('RUNNING TASK : styles');
   return gulp.src(srcDir + sassDir + '*.scss')
+    .pipe($.plumber())
     .pipe(gIf(stream, $.sourcemaps.init()))
-    .pipe($.sass.sync().on('error', handleErrors))
+    .pipe($.sass.sync({
+      outputStyle: 'expanded',
+      precision: 10,
+      includePaths: ['.']
+    }).on('error', handleErrors))
     .pipe($.postcss(processors))
     .pipe(gIf(stream, $.sourcemaps.write('.')))
     .pipe(gIf(production, $.cssnano()))

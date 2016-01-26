@@ -30,6 +30,7 @@ gulp.task('lint:eslint', () => {
     .src(srcDir + jsDir + '**/*.js')
     .pipe(cache('eslint'))
     .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 gulp.task('lint', (cb) => {
