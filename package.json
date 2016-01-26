@@ -10,10 +10,13 @@
   "keywords": [
     "gulp"
   ],
-  "author": "Steven Truesdell <hi@strues.io>",
+  "author": "Steven Truesdell <steven@strues.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/strues/guzzle/issues"
+  },
+  "engines": {
+    "node": ">=5.0.0"
   },
   "homepage": "https://github.com/strues/guzzle#readme",
   "scripts": {
