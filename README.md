@@ -29,3 +29,9 @@ $ npm run build
 ```
 
 ## Documentation
+
+
+Troubleshooting
+---------------
+
+Please create [an issue](https://github.com/strues/guzzle/issues/new).
