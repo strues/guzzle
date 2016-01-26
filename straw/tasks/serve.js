@@ -1,6 +1,8 @@
 import gulp from 'gulp';
 import browserSync, { reload } from 'browser-sync';
 import watch from 'gulp-watch';
+import gutil from 'gulp-util';
+import path from 'path';
 import { argv } from 'yargs';
 import config from '../../config.js';
 import Logger from '../utils/logger';
@@ -9,10 +11,24 @@ const { buildDir, distDir, imgDir, jsDir } = config.dir;
 const production = argv.prod ? true : false;
 const destDir = production ? distDir : buildDir;
 
+let bs = browserSync.create();
+
+function onChange(event) {
+  gutil.log(
+    gutil.colors.green('File ' + event.type + ': ') +
+    gutil.colors.magenta(path.basename(event.path))
+  );
+}
+
+gulp.task('reload', function (done) {
+  bs.reload();
+  done();
+});
+
 gulp.task('serve', () => {
   Logger.task('RUNNING TASK: Serve');
   const logLevel = config.verbose ? 'debug' : 'info';
-  browserSync({
+   bs.init({
     server: {
       baseDir: buildDir
     },
@@ -24,17 +40,17 @@ gulp.task('serve', () => {
     open: config.browserSync.openBrowserOnStartup,
     logFileChanges: config.verbose,
     logConnections: config.verbose,
-    injectChanges: true
+    injectChanges: config.browserSync.injectCSS
   });
 
-  watch(buildDir + jsDir + '*.js', () => reload());
-  watch(buildDir + imgDir + '*', () => reload());
-  watch(buildDir + '*.html', () => reload());
+  watch(buildDir + jsDir + '*.js', ['lint:eslint', 'reload']).on('change', onChange);
+  watch(buildDir + imgDir + '*').on('change', onChange);
+  watch(buildDir + '*.html', ['html', 'reload']).on('change', onChange);
 });
 
-gulp.task('serve:dist', () => {
+gulp.task('serve:dist', ['build'], () => {
   Logger.task('RUNNING TASK : BrowserSync:Dist');
-  browserSync({
+   bs.init({
     server: {
       baseDir: distDir
     },

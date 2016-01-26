@@ -1,5 +1,7 @@
 # Guzzle
-
+[![Build Status][build-badge]][travis]
+[![Dependency Status][david-badge]][david]
+[![devDependency Status][david-dev-badge]][david-dev]
 ## Requirements
 - Node.js (5.0+)
 
@@ -35,3 +37,12 @@ Troubleshooting
 ---------------
 
 Please create [an issue](https://github.com/strues/guzzle/issues/new).
+
+
+[build-badge]: http://img.shields.io/travis/strues/guzzle.svg?branch=master&style=flat
+[david-badge]: http://img.shields.io/david/strues/guzzle.svg?style=flat
+[david-dev-badge]: http://img.shields.io/david/dev/strues/guzzle.svg?style=flat
+
+[travis]: https://travis-ci.org/strues/guzzle
+[david]: https://david-dm.org/strues/guzzle
+[david-dev]: https://david-dm.org/strues/guzzle#info=devDependencies

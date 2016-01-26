@@ -11,7 +11,7 @@ gulp.task('clean', (cb) => {
 });
 
 gulp.task('clean:build', () => {
-  del(buildDir + '**/*', {
+  del(buildDir, {
     force: true
   });
 });

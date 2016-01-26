@@ -10,12 +10,12 @@ const stream = argv.watch ? true : false;
 
 gulp.task('dev', ['clean'], () => {
   Logger.task('RUNNING TASK : Dev');
-  gulp.start('fonts', 'sass', 'images', 'scripts', 'html');
+  gulp.start('sass', 'images', 'scripts', 'html');
 
   if (stream) {
     gulp.start('serve');
     watch(srcDir + sassDir + '**/*.scss', () => gulp.start('sass'));
-    watch(srcDir + imgDir + '*', () => gulp.start('images'));
+    //watch(srcDir + imgDir + '*', () => gulp.start('images'));
     watch(srcDir + '*.html', () => gulp.start('html'));
   }
 });
