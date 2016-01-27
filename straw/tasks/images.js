@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import pngquant from 'imagemin-pngquant';
 import { argv } from 'yargs';
+import gulpLoadPlugins from 'gulp-load-plugins';
 import gIf from 'gulp-if';
 // Guzzle
 import handleErrors from '../utils/handleErrors';

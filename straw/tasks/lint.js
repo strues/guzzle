@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import gIf from 'gulp-if';
+import gulpLoadPlugins from 'gulp-load-plugins';
 import { argv } from 'yargs';
 import runSequence from 'run-sequence';
 // Guzzle
