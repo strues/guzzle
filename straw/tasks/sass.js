@@ -24,11 +24,7 @@ let processors = [
     autoprefixer({
       browsers: config.browsers
     }),
-    mqpacker,
-    csswring({
-      preserveHacks: true,
-      removeAllComments: true
-    })
+    mqpacker
   ];
 
 gulp.task('sass', () => {
