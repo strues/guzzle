@@ -1,6 +1,6 @@
 {
   "name": "guzzle",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "gulp project starter and workflow",
   "main": "gulpfile.babel.js",
   "repository": {
@@ -35,7 +35,6 @@
     "browser-sync": "^2.11.1",
     "css-mqpacker": "^4.0.0",
     "cssnano": "^3.4.0",
-    "csswring": "^4.2.1",
     "del": "^2.2.0",
     "doiuse": "^2.2.1",
     "eslint": "^1.10.3",
@@ -65,8 +64,6 @@
     "gulp-scss-lint": "^0.3.9",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-task-listing": "^1.0.1",
-    "gulp-ttf2woff": "^1.0.1",
-    "gulp-ttf2woff2": "^2.0.1",
     "gulp-uglify": "^1.5.1",
     "gulp-useref": "^3.0.4",
     "gulp-util": "^3.0.7",

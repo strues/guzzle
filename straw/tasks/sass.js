@@ -8,7 +8,6 @@ import { argv } from 'yargs';
 // PostCSS Plugins
 import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
-import csswring from 'csswring';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
 import config from '../../config.js';
@@ -29,7 +28,8 @@ let processors = [
 
 gulp.task('sass', () => {
   Logger.task('RUNNING TASK : styles');
-  return gulp.src(srcDir + sassDir + '*.scss')
+  return gulp
+    .src(srcDir + sassDir + '*.scss')
     .pipe($.plumber())
     .pipe(gIf(stream, $.sourcemaps.init()))
     .pipe($.sass.sync({
@@ -41,14 +41,9 @@ gulp.task('sass', () => {
     .pipe(gIf(stream, $.sourcemaps.write('.')))
     .pipe(gIf(production, $.cssnano()))
     .pipe(gIf(production, $.banner(config.banner)))
-    // .pipe(gIf(production, $.rename({
-    //   suffix: '.min'
-    // })))
     .pipe(gIf(production, $.base64({
       extensions: ['svg', 'png', 'jpg']
     })))
     .pipe(gulp.dest(destDir + cssDir))
-    .pipe(reload({
-      stream: true
-    }));
+    .pipe(reload({stream: true}));
 });

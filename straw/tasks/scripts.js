@@ -23,7 +23,7 @@ gulp.task('scripts', () => {
     };
   });
   Logger.task('RUNNING TASK: Scripts');
-  gulp.src(`${srcDir + jsDir}*.js`)
+  return gulp.src(`${srcDir + jsDir}*.js`)
     .pipe(webpackStream({
       devtool: 'source-map',
       entry: entry,

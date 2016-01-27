@@ -1,6 +1,4 @@
 import gulp from 'gulp';
-import ttf2woff from 'gulp-ttf2woff';
-import ttf2woff2 from 'gulp-ttf2woff2';
 import { argv } from 'yargs';
 import Fontmin from 'fontmin';
 // Guzzle
