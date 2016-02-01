@@ -51,6 +51,9 @@ export default {
       'Open Sans': [400, 600]
     }
   },
+  html: {
+    collapseWhitespace: true
+  },
   css: {
     autoprefixer: ['> 98%']
   },

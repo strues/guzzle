@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import cache from 'gulp-cached';
 import { argv } from 'yargs';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import gIf from 'gulp-if';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
 import config from '../../config.js';
@@ -18,5 +19,6 @@ gulp.task('html', () => {
   return gulp
     .src(srcDir + '*.html')
     .pipe(cache('html'))
+    .pipe(gIf(production, $.htmlmin(config.html)))
     .pipe(gulp.dest(destDir));
 });
