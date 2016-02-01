@@ -10,7 +10,7 @@ const stream = argv.watch ? true : false;
 
 gulp.task('dev', ['clean'], () => {
   Logger.task('RUNNING TASK : Dev');
-  gulp.start('sass', 'images', 'scripts', 'html');
+  gulp.start('fonts', 'sass', 'images', 'scripts', 'html');
 
   if (stream) {
     gulp.start('serve');
