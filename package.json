@@ -62,6 +62,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.1.1",
     "gulp-scss-lint": "^0.3.9",
+    "gulp-scss-lint-stylish": "^1.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-task-listing": "^1.0.1",
     "gulp-uglify": "^1.5.1",

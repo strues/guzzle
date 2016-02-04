@@ -11,7 +11,7 @@ const { buildDir, distDir, imgDir, jsDir } = config.dir;
 const production = argv.prod ? true : false;
 const destDir = production ? distDir : buildDir;
 
-let bs = browserSync.create();
+const bs = browserSync.create();
 
 function onChange(event) {
   gutil.log(
@@ -20,7 +20,7 @@ function onChange(event) {
   );
 }
 
-gulp.task('reload', function (done) {
+gulp.task('reload', (done) => {
   bs.reload();
   done();
 });

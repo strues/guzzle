@@ -19,16 +19,14 @@ gulp.task('lint:scss', () => {
   Logger.task('RUNNING TASK: Lint:SCSS');
   return gulp
     .src([srcDir + sassDir + '**/*.scss', '!' + srcDir + sassDir + 'vendor/**/*.scss'])
-    .pipe($.cache('scsslint'))
-    .pipe($.scssLint())
+    .pipe($.cache($.scssLint({customReport: $.scssLintStylish})));
 });
 
 gulp.task('lint:eslint', () => {
   Logger.task('RUNNING TASK: Lint:Eslint');
   return gulp
     .src(srcDir + jsDir + '**/*.js')
-    .pipe($.cache('eslint'))
-    .pipe($.eslint())
+    .pipe($.cache($.eslint()))
     .pipe($.eslint.format());
 });
 

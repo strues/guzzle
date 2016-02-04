@@ -19,22 +19,11 @@ const banner =
  */
 `;
 
+const ROOT_DIR = __dirname;
+const BASE_DIR = `${ROOT_DIR} + '/src'`;
+
 export default {
   args: minimist(process.argv.slice(2), options),
-  // Verbose logging output
-  verbose: true,
-  server: {
-    port: 8000
-  },
-  browserSync: {
-    allowReload: true, // Reload the page when file changes are made?
-    injectCSS:   true, // Inject CSS changes after .css files are saved?
-    port:        3000, // Server port I.E. http://localhost:3000
-    uiPort:      3001, // BrowserSync UI port I.E. http://localhost:3001
-    openBrowserOnStartup: false,
-    online: true
-  },
-  browsers: 'last 2 versions',
   dir: {
     srcDir: __dirname + '/src/',
     buildDir: __dirname + '/__build__/',
@@ -45,11 +34,22 @@ export default {
     sassDir: 'sass/',
     fontsDir: 'fonts/'
   },
+  // Verbose logging output
+  verbose: true,
+  server: {
+    port: 8000
+  },
+  browserSync: {
+    allowReload: true, // Reload the page when file changes are made?
+    injectCSS: true, // Inject CSS changes after .css files are saved?
+    port: 3000, // Server port I.E. http://localhost:3000
+    uiPort: 3001, // BrowserSync UI port I.E. http://localhost:3001
+    openBrowserOnStartup: false,
+    online: true
+  },
+  browsers: 'last 2 versions',
   fonts: {
-    formats: 'woff woff2',
-    custom: {
-      'Open Sans': [400, 600]
-    }
+    formats: 'woff woff2'
   },
   html: {
     collapseWhitespace: true

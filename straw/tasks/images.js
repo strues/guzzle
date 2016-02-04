@@ -18,11 +18,11 @@ gulp.task('images', () => {
   return gulp
     .src([srcDir + imgDir + '**'])
     .pipe($.newer(destDir + imgDir))
-    .pipe($.cache('img'))
-    .pipe($.imagemin({
+    .pipe($.cache($.imagemin({
       progressive: true,
+      interlaced: true,
       svgoPlugins: [{cleanupIDs: false}],
       use: [pngquant()]
-    }))
+    })))
     .pipe(gulp.dest(destDir + imgDir));
 });
