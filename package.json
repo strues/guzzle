@@ -1,6 +1,6 @@
 {
   "name": "guzzle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gulp project starter and workflow",
   "main": "gulpfile.babel.js",
   "repository": {
