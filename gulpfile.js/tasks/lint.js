@@ -6,7 +6,7 @@ import { argv } from 'yargs';
 import runSequence from 'run-sequence';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
-import config from '../../config.js';
+import config from '../config.js';
 import Logger from '../utils/logger';
 
 const $ = gulpLoadPlugins();
@@ -18,14 +18,14 @@ const destDir = production ? distDir : buildDir;
 gulp.task('lint:scss', () => {
   Logger.task('RUNNING TASK: Lint:SCSS');
   return gulp
-    .src([srcDir + sassDir + '**/*.scss', '!' + srcDir + sassDir + 'vendor/**/*.scss'])
+    .src([config.sass.src + '/**/*.scss', '!' + config.sass.src + '/vendor/**/*.scss'])
     .pipe($.cache($.scssLint({customReport: $.scssLintStylish})));
 });
 
 gulp.task('lint:eslint', () => {
   Logger.task('RUNNING TASK: Lint:Eslint');
   return gulp
-    .src(srcDir + jsDir + '**/*.js')
+    .src(config.javascript.src + '/**/*.js')
     .pipe($.cache($.eslint()))
     .pipe($.eslint.format());
 });
