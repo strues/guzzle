@@ -6,20 +6,20 @@ import { argv } from 'yargs';
 import runSequence from 'run-sequence';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
-import config from '../config.js';
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
 
 const $ = gulpLoadPlugins();
-const { srcDir, buildDir, distDir, jsDir, sassDir } = config.dir;
+
 const stream = argv.watch ? true : false;
 const production = argv.prod ? true : false;
-const destDir = production ? distDir : buildDir;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 
 gulp.task('lint:scss', () => {
   Logger.task('RUNNING TASK: Lint:SCSS');
   return gulp
     .src([config.sass.src + '/**/*.scss', '!' + config.sass.src + '/vendor/**/*.scss'])
-    .pipe($.cache($.scssLint({customReport: $.scssLintStylish})));
+    .pipe($.cache($.stylelint()));
 });
 
 gulp.task('lint:eslint', () => {

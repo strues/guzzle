@@ -4,12 +4,11 @@ import watch from 'gulp-watch';
 import gutil from 'gulp-util';
 import path from 'path';
 import { argv } from 'yargs';
-import config from '../../config.js';
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
 
-const { buildDir, distDir, imgDir, jsDir } = config.dir;
 const production = argv.prod ? true : false;
-const destDir = production ? distDir : buildDir;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 
 const bs = browserSync.create();
 
@@ -30,7 +29,7 @@ gulp.task('serve', () => {
   const logLevel = config.verbose ? 'debug' : 'info';
    bs.init({
     server: {
-      baseDir: buildDir
+      baseDir: BUILD_DIR
     },
     ui: {
       port: config.browserSync.uiPort
@@ -43,16 +42,16 @@ gulp.task('serve', () => {
     injectChanges: config.browserSync.injectCSS
   });
 
-  watch(buildDir + jsDir + '*.js', ['lint:eslint', 'reload']).on('change', onChange);
-  watch(buildDir + imgDir + '*').on('change', onChange);
-  watch(buildDir + '*.html', ['html', 'reload']).on('change', onChange);
+  watch(config.javascript.build + '/*.js', ['lint:eslint', 'reload']).on('change', onChange);
+  watch(config.images.build + '/*').on('change', onChange);
+  watch(config.html.build + '/*.html', ['html', 'reload']).on('change', onChange);
 });
 
 gulp.task('serve:dist', ['build'], () => {
   Logger.task('RUNNING TASK : BrowserSync:Dist');
    bs.init({
     server: {
-      baseDir: distDir
+      baseDir: DIST_DIR
     },
     ui: {
       port: config.browserSync.uiPort

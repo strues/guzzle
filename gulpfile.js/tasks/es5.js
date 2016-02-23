@@ -8,56 +8,16 @@ import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
-import config from '../../config.js';
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
 
-const { srcDir, buildDir, distDir, jsDir } = config.dir;
 const stream = argv.watch ? true : false;
 const production = argv.prod ? true : false;
-const destDir = production ? distDir : buildDir;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 
-gulp.task('scripts', () => {
-  let entry = {};
-  config.javascript.entry.map(item => {
-    entry = {...entry, [item]: `${config.dir.srcDir}${config.dir.jsDir}${item}`
-    };
-  });
-  Logger.task('RUNNING TASK: Scripts');
-  return gulp.src(`${srcDir + jsDir}*.js`)
-    .pipe(webpackStream({
-      devtool: 'source-map',
-      entry: entry,
-      output: {
-        path: destDir + config.dir.jsDir,
-        filename: '[name]'
-      },
-      resolve: {
-        extensions: ['', '.js'],
-        modulesDirectories: [
-          'node_modules',
-          'src/js/',
-          'src/js/vendors',
-          'src/js/utils'
-        ]
-      },
-      watch: stream,
-      module: {
-        loaders: [{
-          loader: 'babel-loader',
-          query: config.javascript.babel,
-          exclude: [
-            path.resolve(__dirname, 'node_modules/'),
-            path.resolve(__dirname, 'src/js/vendors/')
-          ],
-        }]
-      },
-      plugins: [
-        new webpack.NoErrorsPlugin()
-      ].concat(
-        production ? [
-          new webpack.optimize.UglifyJsPlugin(),
-        ] : []
-      )
-    }))
-    .pipe(gulp.dest(destDir + jsDir));
+gulp.task('scripts:es5', () => {
+  Logger.task('RUNNING TASK: Scripts:ES5');
+  return gulp.src(config.javascripts.src + '/**/*.js')
+
+    .pipe(gulp.dest(destDir + '/js'));
 });

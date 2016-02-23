@@ -2,10 +2,10 @@ import gulp from 'gulp';
 import watch from 'gulp-watch';
 import { argv } from 'yargs';
 
-import config from '../../config.js';
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
-
-const { srcDir, imgDir, sassDir } = config.dir;
+const production = argv.prod ? true : false;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 const stream = argv.watch ? true : false;
 
 gulp.task('dev', ['clean'], () => {
@@ -14,8 +14,8 @@ gulp.task('dev', ['clean'], () => {
 
   if (stream) {
     gulp.start('serve');
-    watch(srcDir + sassDir + '**/*.scss', () => gulp.start('sass'));
-    watch(srcDir + imgDir + '*', () => gulp.start('images'));
-    watch(srcDir + '*.html', () => gulp.start('html'));
+    watch(config.sass.src + '/**/*.scss', () => gulp.start('sass'));
+    watch(config.images.src + '/*', () => gulp.start('images'));
+    watch(config.html.src + '/*.html', () => gulp.start('html'));
   }
 });
