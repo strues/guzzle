@@ -1,6 +1,6 @@
-import pkg from './package.json';
+import pkg from '../package.json';
 import minimist from 'minimist';
-
+import { join } from 'path';
 const options = {
   string: 'env',
   default: {
@@ -19,10 +19,10 @@ const banner =
  */
 `;
 
-const ROOT_DIR = __dirname;
-const BASE_DIR = `${ROOT_DIR}/src`;
-const BUILD_DIR = `${ROOT_DIR}/__build__`;
-const DIST_DIR = `${ROOT_DIR}/dist`;
+export const ROOT_DIR = join(__dirname, '../');
+export const BASE_DIR = `${ROOT_DIR}/src`;
+export const BUILD_DIR = `${ROOT_DIR}/__build__`;
+export const DIST_DIR = `${ROOT_DIR}/dist`;
 
 export default {
   args: minimist(process.argv.slice(2), options),
