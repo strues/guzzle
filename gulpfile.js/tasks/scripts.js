@@ -8,27 +8,26 @@ import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
-import config from '../../config.js';
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
 
-const { srcDir, buildDir, distDir, jsDir } = config.dir;
 const stream = argv.watch ? true : false;
 const production = argv.prod ? true : false;
-const destDir = production ? distDir : buildDir;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 
 gulp.task('scripts', () => {
   let entry = {};
   config.javascript.entry.map(item => {
-    entry = {...entry, [item]: `${config.dir.srcDir}${config.dir.jsDir}${item}`
+    entry = {...entry, [item]: `${config.javascript.src}/${item}`
     };
   });
   Logger.task('RUNNING TASK: Scripts');
-  return gulp.src(`${srcDir + jsDir}*.js`)
+  return gulp.src(config.javascript.src + '/*.js')
     .pipe(webpackStream({
       devtool: 'source-map',
       entry: entry,
       output: {
-        path: destDir + config.dir.jsDir,
+        path: config.javascript.build,
         filename: '[name]'
       },
       resolve: {
@@ -59,5 +58,5 @@ gulp.task('scripts', () => {
         ] : []
       )
     }))
-    .pipe(gulp.dest(destDir + jsDir));
+    .pipe(gulp.dest(destDir + '/js'));
 });

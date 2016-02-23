@@ -1,5 +1,5 @@
 import gutil from 'gulp-util';
-import config from '../../config';
+import config from '../config';
 export default {
 
     log: function (logString) {

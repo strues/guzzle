@@ -3,18 +3,17 @@ import { argv } from 'yargs';
 import Fontmin from 'fontmin';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
-import config from '../../config.js';
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
 
-const { srcDir, buildDir, distDir, imgDir, fontsDir} = config.dir;
 const stream = argv.watch ? true : false;
 const production = argv.prod ? true : false;
-const destDir = production ? distDir : buildDir;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 
 gulp.task('fonts', () => {
   Logger.task('RUNNING TASK: Fonts');
   let fontmin = new Fontmin()
-    .src(`${srcDir}/fonts/*.ttf`)
+    .src(config.fonts.src + '/*.ttf')
     .use(Fontmin.ttf2eot({
       clone: true
     }))
@@ -24,7 +23,7 @@ gulp.task('fonts', () => {
     .use(Fontmin.ttf2svg({
       clone: true
     }))
-    .dest(destDir + fontsDir);
+    .dest(destDir + '/fonts');
 
   return fontmin.run(
     function(err, files, stream) {

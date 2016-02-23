@@ -10,28 +10,27 @@ import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
 // Guzzle
 import handleErrors from '../utils/handleErrors';
-import config from '../../config.js';
+
+import config, { DIST_DIR, BUILD_DIR } from '../config.js';
 import Logger from '../utils/logger';
 
 const $ = gulpLoadPlugins();
-const { srcDir, buildDir, distDir, cssDir, sassDir } = config.dir;
+// const { srcDir, buildDir, distDir, cssDir, sassDir } = config.dir;
 const stream = argv.watch ? true : false;
 const production = argv.prod ? true : false;
-const destDir = production ? distDir : buildDir;
+const destDir = production ? DIST_DIR : BUILD_DIR;
 
 let processors = [
-    autoprefixer({
-      browsers: config.browsers
-    }),
+    autoprefixer(config.sass.autoprefixer),
     mqpacker
   ];
 
-gulp.task('sass', () => {
+export default function sassTask() {
   Logger.task('RUNNING TASK : styles');
   return gulp
-    .src(srcDir + sassDir + '*.scss')
+    .src(config.sass.src + '/*.scss')
     .pipe($.plumber())
-    .pipe(gIf(stream, $.sourcemaps.init()))
+    .pipe(gIf(stream, $.sourcemaps.init(config.sass.sourcemaps)))
     .pipe($.sass.sync({
       outputStyle: 'expanded',
       precision: 10,
@@ -44,6 +43,8 @@ gulp.task('sass', () => {
     .pipe(gIf(production, $.base64({
       extensions: ['svg', 'png', 'jpg']
     })))
-    .pipe(gulp.dest(destDir + cssDir))
+    .pipe(gulp.dest(destDir + '/css'))
     .pipe(reload({stream: true}));
-});
+}
+
+gulp.task('sass', sassTask);
