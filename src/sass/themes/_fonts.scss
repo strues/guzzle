@@ -3,3 +3,25 @@ $fonts-settings: (
   'font-size'   : 1rem,
   'line-height' : 1.5em
 );
+
+
+@font-face {
+  font-family: $primary-font;
+  src: url('#{$primary-font-file}');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url('#{$light-font-file}');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url('#{$bold-font-file}');
+  font-weight: bold;
+  font-style: normal;
+}

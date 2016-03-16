@@ -21,3 +21,48 @@ $tweakpoints: ();
 
 /// Colors
 $black: #000;
+$white: #fff;
+$snow: #f1f1f1;
+$cotton: #f9f9f9;
+$water: #0090c5;
+$pacific: #008fc7;
+$astral: #337ab7;
+$black: #000;
+$metal: #8a8a8a;
+$charcoal: #3e3e3e;
+$carbon: #3a3a3a;
+$scorpion: #5c5c5c; /// border color
+$alto: #dcdcdc;
+$soapstone: #dedede;
+$flamingo: #f04b49;
+$thunderbird: #c6211f;
+$crimson: #d81d1c;
+$dashboardText: $charcoal;
+$cart-copy: $metal;
+$cart-border: $alto;
+$search-select-fill: $pacific;
+$gray-background: $cotton;
+$black-background: $carbon;
+$nav-hover-bg: #6b6969;
+$headline-size: 2.25em;
+$lightGrey: #f5f5f5;
+$borderGrey: #e3e3e3;
+$greyArrowColor: rgba(27, 27, 27, 0.57);
+$formTableGrey: #ecf0f3;
+$translucentGrey: rgba(151, 151, 151, 0.27);
+$inactiveTextGrey: #cccbd2;
+$progressGrey: #d8d8d8;
+$inputBackgroundColor: #f6fafb;
+$logViewBackgroundColor: #fdfafb;
+$borderRadiusConst: 5px;
+$blue: #008fc7;
+$darkSlate: #5c5c5c;
+
+$dashboardText: #3e3e3e;
+
+/// Fonts
+$primary-font: 'Lato';
+$primary-font-file: '../../fonts/Lato-Regular.ttf';
+$light-font-file: '../../fonts/Lato-Light.ttf';
+$bold-font-file: '../fonts/Lato-Bold.ttf';
+$bold-font-file: '../../fonts/Lato-Bold.ttf';
