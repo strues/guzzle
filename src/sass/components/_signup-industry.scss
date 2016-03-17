@@ -1,0 +1,49 @@
+.signup-industry {
+
+  .form-container {
+    margin-bottom: 40px;
+  }
+
+  legend {
+    @extend .form-helper;
+  }
+}
+
+.signup-industry-container {
+
+  .row-content-container {
+    margin-bottom: 40px;
+  }
+}
+
+.radio-container {
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  .form-label {
+    position: relative;
+    margin: 30px 50px 0 20px;
+
+    @media (max-width: 767px) {
+      display: inline;
+      padding: 10px;
+      margin: 10px 20px;
+    }
+  }
+}
+
+#radio-yes,
+#radio-no {
+  position: absolute;
+  top: 1px;
+  left: -20px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+
+  @media (max-width: 767px) {
+    top: 10px;
+  }
+}

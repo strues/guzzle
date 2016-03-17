@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart Login</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="register-standalone">
+  <div class="seminar-information-container">
+    <div class="top-info-container">
+      <ul class="top-info">
+        <li>
+          <h2 class="seminar-title form-head">Attendees for Air Conditioning and Refrigeration - Both Days</h2>
+        </li>
+        <li><p>Fresno, CA</p></li>
+        <li class="date"><p>April 11-12, 2016</p></li>
+      </ul>
+    </div>
+    <div class="attendees-container">
+      <h3 class="attendees-header">Attendees</h3>
+      <div class="seminar-attendees-container">
+        <div class="seminar-attendees">
+          <div class="attendees-head">
+            <div class="head-info-container"><span class="head-name">Name</span></div>
+            <div class="head-info-container"><span class="head-email">Email</span></div>
+            <div class="head-info-container"><span class="head-title">Title</span></div>
+            <div class="head-info-container"><span class="head-cost">Individual Cost</span></div>
+          </div>
+          <ul class="attendees-attendee">
+            <li class="attendee">
+              <div class="attendee-info-container"><span class="attendee-name">Jack Kerouac</span></div>
+              <div class="attendee-info-container"><span class="attendee-email">jackieboy55@gmail.com</span></div>
+              <div class="attendee-info-container"><span class="attendee-title">Writer</span></div>
+              <div class="attendee-info-container"><span class="attendee-cost">$990</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="payment-information-container">
+  <div class="company-information-container">
+    <div class="company-profile">
+      <h3>Company Profile</h3>
+    </div>
+    <div class="company-information">
+      <span>Tom Carter</span>
+      <span>tom.carter@company.com</span>
+      <span>Company Name</span>
+      <span>3625 Bridle Court</span>
+      <span>Forest Hills, NY 11375</span>
+      <span>(303) 555-1234</span>
+    </div>
+    <div class="edit-information">
+      <span>Edit Information</span>
+    </div>
+  </div>
+  <div class="creditCard-information-container">
+    <div class="payment-method">
+      <h4>Payment Method</h4>
+    </div>
+    <div class="credit-card">
+      <h4>Mastercard Ending in 1234</h4>
+    </div>
+  </div>
+  <div class="speedCheckout-container">
+    <div class="checkbox-container">
+      <input type="checkbox" id="speedCheckout">
+      <label class="speedCheckout" for="speedCheckout">Save and create an account for faster checkout next time</label>
+    </div>
+    <div class="speedCheckout-form">
+      <div class="form-container">
+        <h2 class="form-intent">Please tell us a bit more about your training needs so we can serve you better.</h2>
+        <form action="">
+          <div class="row-content-container">
+            <fieldset>
+              <legend class="form-helper">
+                Have you previously purchased or attended one or more of our courses?*
+              </legend>
+              <div class="radio-container">
+                <label class="form-label" for="radio-yes">Yes
+                  <input class="form-input" id="radio-yes" type="radio" name="attend" value="yes">
+                </label>
+                <label class="form-label" for="radio-no">No
+                  <input class="form-input" id="radio-no" type="radio" name="attend" value="no">
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="row-content-container">
+            <label class="form-helper" for="industry">Your Industry</label>
+            <div class="select-arrows">
+              <select class="form-input" name="industry" id="industry" required>
+                <option value="Electronics" selected>Electronics</option>
+                <option value="Plumbing" selected>Plumbing</option>
+                <option value="Carpentry" selected>Carpentry</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-content-container">
+            <label class="form-helper" for="role">Please choose the role that best describes your role at your company
+              or
+              facility.*</label>
+            <div class="select-arrows">
+              <select class="form-input" name="role" id="role">
+                <option value="maintenance" selected>I oversee maintenance</option>
+                <option value="maintenance">I oversee maintenance</option>
+                <option value="maintenance">I oversee maintenance</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-content-container">
+            <label class="form-helper" for="frequency">How often do you use outside training, such as seminar courses,
+              at
+              your
+              company/facility?*</label>
+            <div class="select-arrows">
+              <select class="form-input" name="frequency" id="frequency">
+                <option value="Meh">Meh</option>
+                <option value="Regularly">Regularly</option>
+                <option value="Oh yea">Oh yea!</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-content-container">
+            <label class="form-helper" for="employees">About how many employees in our facility need training each
+              year?*</label>
+            <input class="form-input" type="text" id="employees">
+          </div>
+          <div class="row-content-container">
+            <div class="form-helper">What training topics most interest you and/or your team?*</div>
+            <div class="industry-checkbox-container">
+              <input type="checkbox" id="Electrical">
+              <label for="Electrical">Electrical</label>
+            </div>
+            <div class="industry-checkbox-container">
+              <input type="checkbox" id="HVAC">
+              <label for="HVAC">HVAC</label>
+            </div>
+            <div class="industry-checkbox-container">
+              <input type="checkbox" id="PlantManagement">
+              <label for="PlantManagement">Plant Management</label>
+            </div>
+            <div class="industry-checkbox-container">
+              <input type="checkbox" id="MechanicalIndustrial">
+              <label for="MechanicalIndustrial">Mechanical & Industrial</label>
+            </div>
+          </div>
+        </form>
+        <div class="required-helper">
+          <span>* Indicates Required Field</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="totalSubmit-container">
+  <div class="totalPrice-container">
+    <span>Order Total:</span>
+    <span>$7320.00</span>
+  </div>
+  <div class="submitOrder-container">
+    <div class="button-container">
+      <button>Submit your order</button>
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"
+        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

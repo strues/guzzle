@@ -1,0 +1,312 @@
+.seminar-information-container,
+.payment-information-container {
+  border: 1px solid $alto;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+
+.seminar-information-container {
+
+  .seminar-title.form-head {
+    text-align: left;
+  }
+
+  .top-info-container {
+    margin: 35px 40px 25px;
+
+    .top-info {
+      padding: 0;
+    }
+
+    p {
+      font-size: 15px;
+      color: $darkSlate;
+    }
+  }
+
+  .seminar-title {
+    margin-bottom: 10px;
+  }
+
+  .attendees-container {
+    margin-bottom: 15px;
+  }
+
+  .attendees-header {
+    margin: 0 40px 20px;
+    font-size: 16px;
+    color: $metal;
+  }
+
+  .attendee,
+  .attendees-head {
+    display: table;
+    width: 100%;
+
+    >div {
+      display: table-cell;
+
+      &:nth-child(1) {
+        width: 25%;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 35%;
+      }
+
+      &:nth-child(3) {
+        width: 25%;
+      }
+
+      &:last-of-type {
+        width: 15%;
+        text-align: end;
+
+        @media (max-width: 767px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .attendees-head {
+    padding: 15px 40px;
+    background-color: $cotton;
+
+    span {
+      font-size: 12px;
+      color: $scorpion;
+      font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+      .head-email,
+      .head-title,
+      .head-cost {
+        display: none;
+      }
+    }
+  }
+
+  .attendees-attendee {
+    list-style: none;
+    padding: 0 40px;
+
+    >li {
+      padding: 10px 0;
+      &:nth-of-type(1n+2) {
+        border-top: 1px solid $alto;
+      }
+    }
+
+    span {
+      font-size: 15px;
+      color: $scorpion;
+    }
+
+    div {
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.payment-information-container {
+
+  .company-information-container {
+    padding: 35px 40px 0;
+
+    display: table;
+    width: 100%;
+    >div {
+      display: table-cell;
+
+      &:first-of-type {
+        width: 25%;
+      }
+
+      &:nth-of-type(2) {
+        width: 55%;
+      }
+
+      &:last-of-type {
+        width: 20%;
+      }
+    }
+  }
+
+  .company-information {
+    span {
+      display: block;
+      font-size: 15px;
+      color: $scorpion;
+      line-height: 1.7;
+    }
+  }
+
+  .edit-information {
+    text-align: end;
+
+    span {
+      padding-left: 20px;
+      font-size: 14px;
+      color: $blue;
+
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '\f040';
+        font-family: FontAwesome;
+        color: $blue;
+        left: 0;
+      }
+    }
+  }
+
+  .creditCard-information-container {
+    padding: 35px 40px 0;
+
+    display: table;
+    width: 100%;
+
+    >div {
+      display: table-cell;
+
+      &:first-of-type {
+        width: 25%;
+      }
+    }
+
+    h4 {
+      font-size: 14px;
+      color: $darkSlate;
+      font-weight: bold;
+    }
+  }
+
+  .speedCheckout-container {
+    margin: 0 40px;
+
+    .checkbox-container {
+      padding: 40px 0;
+
+      border-bottom: 1px solid transparent;
+
+      transition: 0.4s;
+
+      &.wantForm {
+        border-bottom: 1px solid $alto;
+      }
+    }
+
+    .speedCheckout {
+      padding-left: 40px;
+    }
+  }
+
+  .speedCheckout-form {
+    display: none;
+  }
+
+  .form-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+  }
+
+  .form-helper {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .row-content-container {
+    margin-bottom: 30px;
+  }
+
+  .form-intent {
+    font-size: 22px;
+    margin-top: 30px;
+    color: $charcoal;
+  }
+
+  .radio-container {
+    padding: 15px;
+
+    >label {
+      display: inline;
+    }
+  }
+
+  .industry-checkbox-container {
+    padding: 10px 0;
+
+    label {
+      padding-left: 35px;
+    }
+  }
+
+  .required-helper {
+
+    span {
+      font-size: 14px;
+      color: #9D9B93;
+    }
+  }
+
+  #radio-yes,
+  #radio-no {
+    top: -4px;
+    left: -27px;
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.totalSubmit-container {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: 30px auto 20px;
+
+  display: table;
+  width: 100%;
+
+  >div {
+    display: table-cell;
+
+    &:first-of-type {
+      width: 100%;
+    }
+
+    &:last-of-type {
+      white-space: nowrap;
+    }
+  }
+
+  button {
+    @include default-button(#fff, $blue, transparent, $blue);
+  }
+
+  .totalPrice-container {
+    position: relative;
+    >span {
+      font-size: 22px;
+      color: $charcoal;
+
+      &:last-of-type {
+        position: absolute;
+        left: 180px;
+      }
+    }
+  }
+}
+
+

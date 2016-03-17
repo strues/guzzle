@@ -208,7 +208,7 @@
     }
 
     .date {
-      float: right;
+      margin-left: 25px;
       font-style: italic;
     }
 
@@ -268,39 +268,6 @@
     h2 {
       margin-bottom: 6px;
     }
-  }
-
-  // custom checkbox
-  input[type=checkbox] {
-    display: none;
-  }
-
-  label {
-    margin-bottom: 35px;
-    padding-left: 30px;
-    margin-top: 25px;
-    position: relative;
-  }
-
-  input[type=checkbox] + label:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: $white;
-    border-radius: 3px;
-    border: 1px solid $cart-border;
-    position: absolute;
-    left: 0;
-    top: 3px;
-  }
-
-  input[type=checkbox]:checked + label:before {
-    content:"\2713";
-    color: $blue;
-    text-align:center;
-    line-height:17px;
-    text-shadow:0 0 3px #eee;
   }
 
   .account-update {

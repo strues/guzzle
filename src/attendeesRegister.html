@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Cart Login</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="col-md-12 form-item-wrapper" data-seminar="60210">
-  <div class="container">
-    <!-- top section for one workshop -->
-    <ul class="top-info">
-      <li><h2>Attendees for Air Conditioning and Refrigeration - Both Days</h2><p></p></li>
-      <li><p>Fresno, CA</p></li>
-      <li class="date"><p>April 11-12, 2016</p></li>
-    </ul>
-    <!-- end -->
-    <div class="attendee-info-form-wrap">
-      <p class="class-option">Attendee #1</p>
-      <form class="reg-form">
-        <div class="form-group col-xs-12 col-sm-6 col-md-3">
-          <input id="firstname1" name="firstname" type="text" class="form-control" placeholder="First Name">
-        </div>
+<div class="register-standalone">
+  <div class="container-fluid register-top">
 
-        <div class="form-group col-xs-12 col-sm-6 col-md-3">
-          <input id="lastname1" name="lastname" type="text" class="form-control" placeholder="Last Name">
-        </div>
-
-        <div class="form-group col-xs-12 col-sm-6 col-md-3">
-          <input id="title1" name="title" type="text" class="form-control" placeholder="Title">
-        </div>
-
-        <div class="form-group col-xs-12 col-sm-6 col-md-3">
-          <input id="email1" name="email" type="email" class="form-control" placeholder="Email">
-        </div>
-
-        <input id="attendee1" name="attendee" type="hidden" value="1">
-        <input id="attendeeInc1" name="attendeeInc" type="hidden" value="1">
-      </form>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Register</h1>
+        <ul class="indicator">
+          <li class="step step1"></li>
+          <li class="line line1"></li>
+          <li class="step step2"></li>
+          <li class="line line2"></li>
+          <li class="step step3"></li>
+        </ul>
+      </div>
     </div>
-
   </div>
 
+  <div class="container-fluid form-container gradient-bg" data-cart="ed61c879-28a9-4b26-9cdd-0de51aa6ee67">
+
+    <div class="col-md-12 form-item-wrapper" data-seminar="60210">
+      <div class="container">
+        <!-- top section for one workshop -->
+        <ul class="top-info">
+          <li><h2>Attendees for Air Conditioning and Refrigeration - Both Days</h2><p></p></li>
+          <li><p>Fresno, CA</p></li>
+          <li class="date"><p>April 11-12, 2016</p></li>
+        </ul>
+        <!-- end -->
+
+        <div class="attendee-info-form-wrap">
+          <p class="class-option">Attendee #1</p>
+          <form class="reg-form">
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+              <input id="firstname1" name="firstname" type="text" class="form-control" placeholder="First Name">
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+              <input id="lastname1" name="lastname" type="text" class="form-control" placeholder="Last Name">
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+              <input id="title1" name="title" type="text" class="form-control" placeholder="Title">
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+              <input id="email1" name="email" type="email" class="form-control" placeholder="Email">
+            </div>
+
+            <input id="attendee1" name="attendee" type="hidden" value="1">
+            <input id="attendeeInc1" name="attendeeInc" type="hidden" value="1">
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-12" style="min-height: 30px;">
+      <div class="spinner checkout-loader">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+
+    </div>
+    <div class="col-md-12 col-md-offset-3">
+      <p class="checkout-err-msg" style="display: none;"></p>
+    </div>
+    <a id="reg-submit" class="btn-reg btn-blue-solid next-btn" href="/search-seminars/?error=90" data-page="1">Next</a>
+  </div>
 </div>
 </body>
 </html>
