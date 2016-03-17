@@ -263,3 +263,21 @@
     }
   }
 }
+
+@mixin tablet-portrait-and-up {
+  @media (min-width : $mq-tablet-portrait-and-up) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-and-up {
+  @media (min-width : $mq-tablet-landscape-and-up) {
+    @content;
+  }
+}
+
+@mixin med-desktop-and-up {
+  @media (min-width : $mq-md-desktop-and-up) {
+    @content;
+  }
+}

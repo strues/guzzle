@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart Login</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="register-standalone">
+  <div class="col-md-12">
+    <form>
+      <div class="container">
+        <div class="row form-container">
+          <div class="company-profile-container container">
+            <div class="col-xs-12">
+              <h2 class="form-head">Company Profile</h2>
+            </div>
+            <div class="col-xs-12 immutable-account-info">
+              <span class="account-data">Tom Sawyer</span>
+              <span class="account-data">tommy.sawyer@gmail.com</span>
+            </div>
+            <div class="form-group col-xs-12">
+              <input type="text" class="form-control" placeholder="Mailing Address">
+            </div>
+            <div class="form-group col-xs-12">
+              <input type="text" class="form-control" placeholder="Mailing Address line 2">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-4">
+              <select class="form-control" name="state">
+                <option value="" disabled selected>Country</option>
+                <option value="US">United States</option>
+                <option value="CAN">Canada</option>
+              </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-4">
+              <input type="text" class="form-control" placeholder="City">
+            </div>
+            <!-- 2 -->
+            <div class="form-group col-xs-12 col-sm-6 col-md-2">
+              <select class="form-control" name="state">
+                <option value="" disabled selected>State / Province</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">District of Columbia</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+                <optgroup label="Province">
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NL">Newfoundland and Labrador</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Quebec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="YT">Yukon</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2">
+              <input type="text" class="form-control" placeholder="Postal Code">
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-6 col-md-5">
+              <input type="text" class="form-control" placeholder="Phone Number">
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+              <div class="extension-container">
+                <div class="extension-label-container"><label class="label-extension" for="extension">Ext.</label></div>
+                <div class="extension-input-container"><input type="text" class="form-control" id="extension"></div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <input type="checkbox" name="supervisor-diff" id="account-update">
+              <label class="account-update" for="account-update">Save and update my dashboard with this company
+                information</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-container">
+          <div class="billing-opts-wrapper container">
+            <div class="col-xs-12">
+              <h2 class="form-head">Billing Information</h2>
+            </div>
+            <div class="col-xs-12">
+              <input type="checkbox" name="supervisor-diff" id="supervisor-diff">
+              <label for="supervisor-diff">Is your billing information different? If yes, check this box.</label>
+            </div>
+
+            <!-- form fields that appear when checkbox is checked -->
+            <div class="hidden-different-check">
+              <div class="form-group col-xs-12 col-sm-6 col-md-6">
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+              <div class="form-group col-xs-12 col-sm-6 col-md-6">
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+              <div class="form-group col-xs-12">
+                <input type="text" class="form-control" placeholder="Mailing Address">
+              </div>
+              <div class="form-group col-xs-12">
+                <input type="text" class="form-control" placeholder="Mailing Address line 2">
+              </div>
+              <!-- 4 -->
+              <div class="form-group col-xs-12 col-sm-6 col-md-4">
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+              <!-- 2 -->
+              <div class="form-group col-xs-12 col-sm-6 col-md-2">
+                <select class="form-control" name="state">
+                  <option value="" disabled selected>State / Province</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="IA">Iowa</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MD">Maryland</option>
+                  <option value="ME">Maine</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MT">Montana</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NY">New York</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VA">Virginia</option>
+                  <option value="VT">Vermont</option>
+                  <option value="WA">Washington</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WY">Wyoming</option>
+                  <optgroup label="Province">
+                    <option value="AB">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="QC">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="YT">Yukon</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6 col-md-4">
+                <input type="text" class="form-control" placeholder="Postal Code">
+              </div>
+
+              <div class="form-group col-xs-12 col-sm-6 col-md-2">
+                <select class="form-control" name="state">
+                  <option value="" disabled selected>Country</option>
+                  <option value="US">United States</option>
+                  <option value="CAN">Canada</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- end form fields that appear when checkbox is checked -->
+
+            <div class="billing-opts-container row">
+              <div class="container">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                  <div class="vcenter">
+                    <label class="billing-opts-label" for="billing-opts">Choose your payment type</label>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                  <select class="form-control" name="billing-opts-dropdown" id="billing-opts">
+                    <option value="" disabled selected>Payment Type</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="invoice">Invoice Me</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <p class="col-xs-12 col-md-8 billing-info-desc">A checkbox or radio with the disabled attribute will be
+              styled appropriately. To have the for the checkbox or radio also display a "not-allowed" cursor when the
+              user hovers over the label, add the .disabled class to your .radio, .radio-inline, .checkbox,
+              .checkbox-inline, or</p>
+
+            <!-- start credit card info -->
+            <div class="cc-info">
+              <div class="form-group col-xs-12 col-sm-12">
+                <input type="text" class="form-control" placeholder="Name on card">
+              </div>
+              <div class="form-group col-xs-12 col-sm-12">
+                <input type="text" class="form-control" placeholder="Card number">
+              </div>
+              <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <input type="text" class="form-control" placeholder="Expiration">
+              </div>
+              <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <input type="text" class="form-control" placeholder="CVV" maxlength="4" id="cvv">
+              </div>
+
+              <div class="cvv-info form-group col-xs-12 col-sm-6 col-md-3">
+                <p class="cvv-text">What's this?<span><img src="/assets/images/cvv_visa.gif">Three-digit number on the back of your card.</span>
+                </p>
+              </div>
+            </div>
+            <!-- end credit card info -->
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

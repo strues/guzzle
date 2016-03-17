@@ -8,6 +8,13 @@ $breakpoints: (
     'massive'      : 100rem
 );
 
+$mq-tablet-portrait-and-up  : 768px !default; // !default means it won't be overwritten.
+$mq-below-tablet-portrait   : 767px !default;
+$screen-md                  : 992px !default;
+$mq-tablet-landscape-and-up : 1025px !default;
+$mq-md-desktop-and-up       : $screen-md !default;
+$mq-lg-desktop              : 1400px !default;
+
 // ( rem => px
 //     'small'        : 530px,
 //     'medium'       : 768px,
@@ -57,8 +64,10 @@ $logViewBackgroundColor: #fdfafb;
 $borderRadiusConst: 5px;
 $blue: #008fc7;
 $darkSlate: #5c5c5c;
-
+$headline-black: #3e3e3e;
 $dashboardText: #3e3e3e;
+$red-text: #c6211f;
+$red-button: $red-text;
 
 /// Fonts
 $primary-font: 'Lato';

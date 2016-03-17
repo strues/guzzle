@@ -1,0 +1,605 @@
+.register-standalone {
+  .form-control {
+    border: 1px solid $cart-border;
+  }
+
+  .register-top {
+    background-color: #f1f1f1;
+    padding-bottom: 20px;
+    .jumbotron {
+      max-width: 435px;
+      margin: 80px auto;
+      h1 {
+        color: $headline-black;
+        &:before, &:after {
+          content: none;
+        }
+      }
+
+      .indicator {
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        display: inline-block;
+        padding: 0;
+
+        li {
+          float: left;
+        }
+      }
+
+      .line {
+        width: 50%;
+        height: 14px;
+        background-color: #D6D6D6;
+      }
+
+      .step {
+        position: absolute;
+        background-color: #D6D6D6;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -14px;
+
+        &:after {
+          position: relative;
+          bottom: -10px;
+          font-style: italic;
+          color: $headline-black;
+          width: 60px;
+          left: -50%;
+          font-weight: 400;
+          display: inline-block;
+          bottom: -35px;
+        }
+      }
+
+      .active {
+        &:after {
+          color: $headline-black;
+        }
+      }
+
+      .step1 {
+        left: -10px;
+        background-color: $red-button;
+        &:after {
+          content: 'Step 1';
+        }
+      }
+
+      .step2 {
+        left: 50%;
+        margin-left: -14px;
+        &:after {
+          content: 'Step 2';
+        }
+      }
+
+      .step3 {
+        right: -10px;
+        &:after {
+          content: 'Step 3';
+        }
+      }
+    }
+    .container {
+      margin-bottom: 0;
+    }
+  }
+
+  #BillingDifferent {
+    max-width: 90%;
+  }
+
+  .indicator {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+
+    li {
+      float: left;
+    }
+  }
+
+  .line {
+    width: 50%;
+    height: 14px;
+    background-color: #D6D6D6;
+  }
+
+  .step {
+    position: absolute;
+    background-color: #D6D6D6;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -14px;
+
+    &:after {
+      position: relative;
+      font-style: italic;
+      color: $headline-black;
+      width: 60px;
+      left: -50%;
+      font-weight: 400;
+      display: inline-block;
+      bottom: -35px;
+    }
+  }
+
+  .active {
+    &:after {
+      color: $headline-black;
+    }
+  }
+
+  .step1 {
+    left: -10px;
+    background-color: $red-button;
+    &:after {
+      content: 'Step 1';
+    }
+  }
+
+  .step2 {
+    left: 50%;
+    margin-left: -14px;
+    &:after {
+      content: 'Step 2';
+    }
+  }
+
+  .step3 {
+    right: -10px;
+    &:after {
+      content: 'Step 3';
+    }
+  }
+
+  // error states
+  .form-group {
+    span {
+      margin-left: 3px;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+
+  .form-container {
+    background-color: #f1f1f1;
+    padding-top: 40px;
+    .result .container {
+      margin: 10px auto;
+    }
+  }
+
+  .form-item-wrapper {
+    padding: 0;
+    @include tablet-landscape-and-up {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .form-control {
+      background-color: #FCFCFC;
+    }
+
+    .container {
+      background-color: $white;
+      border: 1px solid $cart-border;
+      border-radius: 10px;
+      color: $cart-copy;
+      margin-bottom: 30px;
+      padding: 0 0 30px;
+    }
+  }
+
+  .top-info {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    li, p {
+      display: inline;
+    }
+
+    .date {
+      float: right;
+      font-style: italic;
+    }
+
+    h2 {
+      text-align: center;
+      @include tablet-portrait-and-up {
+        text-align: left;
+      }
+    }
+  }
+
+  .class-option {
+    text-align: center;
+    margin: 25px 0;
+    font-style: italic;
+    @include tablet-portrait-and-up {
+      padding-left: 15px;
+      text-align: left;
+      margin: 20px 0 10px;
+      display: inline-block;
+    }
+  }
+
+  .next-btn {
+    display: table;
+    text-align: center;
+    margin: 12px auto 45px;
+    width: 150px;
+  }
+
+  // 2nd register screen
+  .register-two-top {
+    margin-top: 80px;
+    .line1, .step2 {
+      background-color: $red-button;
+    }
+  }
+
+  .register-two {
+    background-color: #f1f1f1;
+
+    .container {
+      display: none;
+      padding: 0;
+      margin: 0 auto;
+      @include tablet-portrait-and-up {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  .billing-opts-wrapper {
+    display: inline-block;
+    margin-bottom: 40px;
+    width: 100%;
+    h2 {
+      margin-bottom: 6px;
+    }
+  }
+
+  // custom checkbox
+  input[type=checkbox] {
+    display: none;
+  }
+
+  label {
+    margin-bottom: 35px;
+    padding-left: 30px;
+    margin-top: 25px;
+    position: relative;
+  }
+
+  input[type=checkbox] + label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border-radius: 3px;
+    border: 1px solid $cart-border;
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    content:"\2713";
+    color: $blue;
+    text-align:center;
+    line-height:17px;
+    text-shadow:0 0 3px #eee;
+  }
+
+  .account-update {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .disabled {
+    pointer-events: none;
+    background-color: gray;
+  }
+
+  .cc-info {
+    float: left;
+    display: none;
+  }
+  .invoice-info {
+    float: left;
+    display: none;
+
+    p {
+      max-width: 600px;
+      margin-bottom: 28px;
+      margin-top: 10px;
+    }
+  }
+
+
+  .cvv-text {
+    position: relative;
+    cursor: pointer;
+    span {
+      display: none;
+      border-radius: 4px;
+      border: 1px solid $cart-border;
+      background-color: $white;
+      position:absolute;
+      top: -200px;
+      left: 120%;
+      z-index: 4;
+      width:auto;
+      max-width:320px;
+      min-height:128px;
+      padding: 15px;
+      @include transition(0.25s);
+
+      img {
+        margin-bottom: 7px;
+      }
+
+      &.showing {
+        display: block;
+      }
+    }
+  }
+
+  .hidden-different-check {
+    display: none;
+    float: left;
+    margin-bottom: 25px;
+  }
+
+  .cvv-info {
+    font-style: italic;
+    margin: 6px 0 10px;
+  }
+  .cvv-text {
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  .summary-top {
+    margin-top: 50px;
+    @include med-desktop-and-up {
+      margin-top: 80px;
+    }
+    .step, .line {
+      background-color: $red-button;
+    }
+
+    .container {
+      margin: 50px auto 10px;
+    }
+
+    .jumbotron {
+      margin: 20px auto 0;
+    }
+  }
+
+  .summary-main {
+    position: relative;
+    padding-bottom: 40px;
+    .container {
+      margin: 20px auto;
+      padding: 0;
+      @include med-desktop-and-up {
+        padding: 0 15px;
+      }
+    }
+    .edit-btn {
+      float: right;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding: 0;
+    }
+    h2 {
+
+      margin-bottom: 5px;
+      @include tablet-portrait-and-up {
+        margin-top: 0;
+      }
+    }
+
+    .attendee-info {
+      line-height: 2;
+      margin: 15px 0;
+      @include med-desktop-and-up {
+        line-height: inherit;
+        margin: 10px 0;
+      }
+      .summary-opts {
+        font-style: italic;
+      }
+    }
+  }
+
+  .name, .email {
+    margin-bottom: 8px;
+  }
+
+  .summary-item-top {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: 20px 0;
+
+    .price {
+      font-size: 21px;
+      text-align: left;
+      margin-top: 10px;
+      @include tablet-portrait-and-up {
+        text-align: right;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .purchaser-info-wrap {
+    margin-bottom: 30px;
+    @include med-desktop-and-up {
+      margin-bottom: 10px;
+    }
+  }
+
+  .purchaser-info {
+    line-height: 1.75;
+    margin-top: 10px;
+  }
+
+  .purchaser-name {
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  .summary-submit-btn {
+    text-align: center;
+    margin: 0 auto 20px;
+    display: table;
+    width: 150px;
+    @include tablet-portrait-and-up {
+      float: right;
+      margin-top: 10px;
+    }
+  }
+
+  .card-submit-wrap {
+    position: relative;
+    height: 100px;
+    margin-bottom: 60px;
+  }
+
+  .card-loader {
+    position: static;
+    margin: 0 auto;
+    height: 33px;
+  }
+
+  .processing-msg {
+    display: none;
+    text-align: center;
+    @include med-desktop-and-up {
+      width: 400px;
+      margin: 15px auto 0;
+    }
+  }
+
+  .total-price {
+    text-align: center;
+    margin-top: 40px;
+    @include tablet-portrait-and-up {
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+    }
+  }
+
+  .field-validation-error {
+    margin-left: 5px;
+    color: $red-text;
+    margin-top: 5px;
+  }
+
+  .checkout-loader {
+    top: 50px;
+    right: 52px;
+    left: auto;
+    z-index: 9;
+    @include med-desktop-and-up {
+      top: 39px;
+      left: 50%;
+      right: auto;
+    }
+  }
+
+  #button-submit {
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  /// Tim Wilt updates, but not all. Others are in their appropriate positions
+
+  .form-container {
+    max-width: 1200px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .company-profile-container {
+    margin-bottom: 40px;
+  }
+
+  .form-head {
+    font-size: 22px;
+  }
+
+  .immutable-account-info {
+    padding-bottom: 25px;
+    padding-top: 20px;
+
+    .account-data {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .extension-container {
+    display: table;
+    width: 100%;
+
+    >div {
+      display: table-cell;
+    }
+  }
+
+  .extension-label-container label {
+    bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 14px;
+    color: #9D9B93;
+  }
+
+  .billing-opts-container {
+    margin-bottom: 15px;
+  }
+
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .billing-opts-label {
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 0;
+    padding-left: 0;
+    white-space: nowrap;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+
+}
