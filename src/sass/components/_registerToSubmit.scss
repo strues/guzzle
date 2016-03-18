@@ -1,5 +1,6 @@
 .seminar-information-container,
-.payment-information-container {
+.payment-information-container,
+.totalSubmit-container {
   border: 1px solid $alto;
   border-radius: 10px;
   max-width: 1000px;
@@ -272,10 +273,6 @@
 }
 
 .totalSubmit-container {
-  max-width: 1000px;
-  padding: 0 10px;
-  margin: 30px auto 20px;
-
   display: table;
   width: 100%;
 

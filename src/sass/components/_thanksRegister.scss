@@ -1,0 +1,63 @@
+.thanksRegister-container {
+  border: 1px solid $alto;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 40px;
+}
+
+.thanks-container {
+  text-align: center;
+  border-bottom: 1px solid $alto;
+}
+
+.thanks {
+  font-size: 35px;
+  color: $charcoal;
+  font-weight: 200;
+  margin-bottom: 25px;
+}
+
+.thanks-body {
+  font-size: 14px;
+  color: $metal;
+  line-height: 1.4;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.confirmation-container {
+  margin-bottom: 45px;
+
+  span {
+    display: inline;
+  }
+}
+
+.confirmation-number-lead,
+.confirmation-number {
+  font-size: 16px;
+  color: $darkSlate;
+  font-weight: bold;
+}
+
+.registerAccount-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.registerAccount-head {
+  @extend .confirmation-number-lead;
+  margin-bottom: 30px;
+}
+
+.registerAccount-body {
+  @extend .thanks-body;
+  margin-bottom: 40px;
+}
+
+.registerAccount-button {
+  @include default-button(#fff, $blue, transparent, $blue);
+}
+
+
