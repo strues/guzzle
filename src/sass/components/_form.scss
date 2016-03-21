@@ -129,7 +129,7 @@
   margin-bottom: 30px;
   opacity: 0.8;
 
-  @include respond-to(768px) {
+  @media (max-width: 767px) {
     font-size: 17px;
   }
 }

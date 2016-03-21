@@ -1,0 +1,33 @@
+.returned-information {
+  margin-bottom: 55px;
+
+  >span {
+    display: block;
+    margin: 5px 0;
+    text-align: center;
+    color: $charcoal;
+    font-size: 18px;
+  }
+}
+
+.confirm-information {
+
+  .base-button {
+    padding: 8px 15px;
+
+    &:first-of-type {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.confirm-information {
+  max-width: 800px;
+
+  .form-helper {
+    font-weight: 400;
+    text-align: center;
+    color: $scorpion;
+    margin-bottom: 50px;
+  }
+}

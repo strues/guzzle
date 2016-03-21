@@ -7,7 +7,7 @@ $fonts-settings: (
 
 @font-face {
   font-family: $primary-font;
-  src: url('#{$primary-font-file}');
+  src: url('#{$primary-file}');
   font-weight: normal;
   font-style: normal;
 }
