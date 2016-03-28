@@ -10,13 +10,59 @@
 </head>
 
 <body>
-  <a href="cartLogin.html">Go to Cart Login</a>
-  <a href="attendeesRegister.html">Go to Attendees register</a>
-  <a href="loggedinRegister2.html">Go to loggedin register</a>
-  <a href="reviewToSumbit.html">Go to review to submit</a>
-  <a href="thanksRegister.html">thanksRegister</a>
-  <a href="signUpExisting.html">SignUpExisting</a>
-  <script src="js/index.js"></script>
+<a href="cartLogin.html">Go to Cart Login</a>
+<a href="attendeesRegister.html">Go to Attendees register</a>
+<a href="loggedinRegister2.html">Go to loggedin register</a>
+<a href="reviewToSumbit.html">Go to review to submit</a>
+<a href="thanksRegister.html">thanksRegister</a>
+<a href="signUpExisting.html">SignUpExisting</a>
+
+<div class="checkout-login-container modal-content-container">
+  <div class="login-container">
+    <div class="form-container">
+      <h2 class="form-helper">Log in to your account for faster checkout</h2>
+      <form action="">
+        <div class="row-content-container">
+          <label for="workEmail" class="form-label">Work Email Address</label>
+          <input class="form-input" id="workEmail" type="password" placeholder="Enter your new password">
+        </div>
+        <div class="row-content-container">
+          <label for="password" class="form-label">Password</label>
+          <input class="form-input" id="password" type="password" placeholder="Confirm your new password">
+        </div>
+        <div class="buttons-container">
+          <div class="button-container">
+            <button class="base-button">Next</button>
+          </div>
+          <div class="button-container">
+            <button class="forgot-password">Forgot password?</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="continue-container">
+    <div class="checkout-options-container">
+      <div class="checkout-option1-container">
+        <h2 class="form-helper">Create an account during checkout</h2>
+        <p class="checkout-option-description">Vivamus id rhoncus odio. Sed molestie rutrum mi et vulputate. Vestibulum
+          a bibendum magna.</p>
+        <div class="button-container">
+          <button class="base-button">Continue to Checkout</button>
+        </div>
+      </div>
+      <div class="checkout-option2-container">
+        <h2 class="form-helper">Continue as guest</h2>
+        <p class="checkout-option-description">Vivamus id rhoncus odio. Sed molestie rutrum mi et vulputate. Vestibulum
+          a bibendum magna.</p>
+        <div class="button-container">
+          <button class="base-button">Continue as guest</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/index.js"></script>
 </body>
 
 </html>

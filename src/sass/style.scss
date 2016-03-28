@@ -2,17 +2,13 @@
 @import 'themes/colors';
 @import 'themes/fonts';
 @import 'themes/default';
-
-
 @import 'utils/functions';
 @import 'utils/helpers';
 @import 'utils/mixins';
-
 @import 'vendor/reset';
 @import 'base/typography';
 @import 'base/form';
 @import 'base/buttons';
-
 @import 'components/default';
 @import 'components/form';
 //@import 'components/modal-form';
@@ -21,9 +17,7 @@
 @import 'components/register';
 @import 'components/registerToSubmit';
 @import 'components/thanksRegister';
-
 @import 'components/signup-confirmation';
-
 @import 'pages/home';
 
 html {

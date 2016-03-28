@@ -34,8 +34,12 @@ class FormToggle {
   }
 }
 
+console.log(document.getElementsByClassName('register-standalone'));
+
 $(() => {
 
   new FormToggle($('.speedCheckout-container'));
+
+  console.log($('.speedCheckout-container'));
 
 });
