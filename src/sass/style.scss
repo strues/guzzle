@@ -2,17 +2,13 @@
 @import 'themes/colors';
 @import 'themes/fonts';
 @import 'themes/default';
-
-
 @import 'utils/functions';
 @import 'utils/helpers';
 @import 'utils/mixins';
-
 @import 'vendor/reset';
 @import 'base/typography';
 @import 'base/form';
 @import 'base/buttons';
-
 @import 'components/default';
 @import 'components/form';
 //@import 'components/modal-form';
@@ -21,11 +17,31 @@
 @import 'components/register';
 @import 'components/registerToSubmit';
 @import 'components/thanksRegister';
-
 @import 'components/signup-confirmation';
-
 @import 'pages/home';
 
 html {
   font-family: Lato, 'sans-serif';
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(255, 35, 155);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 0, 0, 0.4);
 }

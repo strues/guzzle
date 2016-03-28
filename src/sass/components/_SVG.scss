@@ -1,0 +1,161 @@
+.fun-container {
+  text-align: center;
+  position: relative;
+}
+
+.fun-text {
+  position: absolute;
+  left: 50%;
+  margin-left: -28px;
+  top: 50%;
+  font-size: 18px;
+}
+
+.circle-container {
+  margin-top: 30px;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .circle {
+      stroke: green;
+      stroke-width: 3px;
+      stroke-dashoffset: -((2*24)*3.141);
+    }
+
+    .circleSmall {
+      stroke: green;
+      stroke-width: 4px;
+      stroke-dashoffset: 0;
+    }
+
+    .circleBg {
+      stroke: rgba(20,20,20,0);
+    }
+  }
+}
+
+circle {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circle {
+  fill: none;
+  stroke: blue;
+  stroke-width: 4px;
+  stroke-dasharray: ((2*12)*3.141) ((2*36)*3.141);
+  stroke-dashoffset: ((2*24)*3.141);
+
+  transition: 1s cubic-bezier(.23, 1, .23, 1);
+}
+
+path {
+  fill: #000;
+}
+
+.circleSmall {
+  fill: none;
+  stroke: red;
+  //defines the stroke gap lengths. If only one is defined, they both take that value
+  //this equation 2Rpi allows me to perfectly set the circumference depending upon the radius value
+  //In this case 13 1/4 of the radius, and therefore 1/4 of the circumference. So quarter on, quarter off
+  stroke-dasharray: ((2*11)*3.141);
+
+  //dashoffset specifies the distance into the dash pattern to start the dash.
+  stroke-dashoffset: ((2*44)*3.141);
+  stroke-width: 4px;
+
+  transition: 1.2s cubic-bezier(.23, 1, .23, 1);
+}
+
+.circleBg {
+  stroke-width: 2px;
+  stroke-dasharray: ((2*48)*3.141)/30;
+
+  transition: .8s cubic-bezier(.23, 1, .23, 1);
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0,0,0,.8);
+  height: 100%;
+
+  margin-left: 100px;
+
+  img {
+    vertical-align: top;
+    opacity: 0.8;
+
+    transition: .3s;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+
+    .hover-content:before {
+      //transform: translate3d(0,0,0);
+      transform: rotate(-15deg);
+    }
+
+    .hover-head {
+      transform: translate3d(0,-30px, 0);
+    }
+
+    .hover-body {
+      transform: translate3d(0,-30px, 0);
+    }
+  }
+}
+
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+
+  color: #fff;
+
+  transition: .4s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: -60px;
+    bottom: -200px;
+    height: 200px;
+    background-color: rgba(255,255,255,0.75);
+    //transform: rotate(45deg);
+    transform-origin: top left;
+
+    transition: .3s;
+  }
+}
+
+.hover-head {
+  margin-top: 80px;
+  font-size: 36px;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+
+  transition: .3s;
+
+  strong {
+    font-weight: 800;
+  }
+}
+
+.hover-body {
+  font-size: 18px;
+
+  transition: .4s;
+}
